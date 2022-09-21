@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Muhammad Tegar Raung Ardi</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+  <style>
+    #map {
+      width: 1060px;
+      height: 580px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Vlava - v4.8.0
+  * Template URL: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <h1><br></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Map</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" style="	background-image: url(assets/img/gps-og-image.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+      <h1 class="bg-warning text-light">WEBMAP SEBARAN SEKOLAH<br>Kecamatan jiwan, kabupaten madiun, jawa timur</h1>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>
+      </div>
+    </div>
+  </div>
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about" style="">
+      <div class="container">
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Perkenalan diri</h2>
+            <h3>Perkenalkan, saya Muhammad Tegar Raung Ardi mahasiswa program studi Teknologi Survei dan Pemetaan Dasar Sekolah Vokasi Universitas Gadjah Mada angkatan 2020</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" style="">
+            <p style="">Orang tua saya bekerja sebagai pedagang makanan ringan, Biasanya beliau berdagang dengan menitipkan jajanan ke kantin - kantin sekiolah.&nbsp;</p>
+            <p class="fst-italic">Untuk mempermudah dan membantu orang tua saya, saya berinisiatif membuatkan peta sebaran sekoalh di daerah rumah saya dengan radius 2,5 km dari rumah saya. Harapannya dapat mempermudah orang tua saya dalam mengantar makanan ke seklah - sekolah dan mungkin dapat membantu orang lain yang memiliki bisnis atau keperluan yang sama.</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+    <!-- ======= Services Section ======= -->
+    <!-- End Services Section -->
+    <!-- ======= Featured Section ======= -->
+    <!-- End Featured Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <!-- End Testimonials Section -->
+    <!-- ======= Portfolio Section ======= -->
+    <!-- End Portfolio Section -->
+    <!-- ======= Team Section ======= -->
+    <!-- End Team Section -->
+    <!-- ======= Pricing Section ======= -->
+    <!-- End Pricing Section -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq"></section><!-- End Frequently Asked Questions Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>PETA SEBARAN SEKOLAH</h2>
+          <p>KECAMATAN JIWAN, KABUPATEN MADIUN, JAWA TIMUR, INDONESIA</p>
+        </div>
+        <div id="map"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel slide" data-ride="carousel" id="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-caption">
+                    <h5 class="m-0">Carousel</h5>
+                    <p>with controls</p>
+                  </div>
+                </div>
+                <div class="carousel-item"> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-bubble-light.svg">
+                  <div class="carousel-caption">
+                    <h5 class="m-0">Carousel</h5>
+                    <p>with controls</p>
+                  </div>
+                </div>
+                <div class="carousel-item"> <img class="d-block img-fluid w-100" src="https://static.pingendo.com/cover-moon.svg">
+                  <div class="carousel-caption">
+                    <h5 class="m-0">Carousel</h5>
+                    <p>with controls</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-10">
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Alamat:</h4>
+                  <p>Jalan Raya Solo KM 21 Jiwan, Kabupaten Madiun, Jawa Timur</p>
+                </div>
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>tegarraung3@gmail.com</p>
+                </div>
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-phone"></i>
+                  <h4 contenteditable="true">No Telepon:</h4>
+                  <p>08885279220</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var map = L.map('map').setView([-7.621023411023217, 111.47902278131659], 14);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 100,
+          attribution: '@ OpenStreetMap'
+        }).addTo(map);
+        var marker = L.marker([-7.621023411023217, 111.47902278131659]).bindPopup('Rumah Saya').addTo(map);
+        var circle = L.circle([-7.621023411023217, 111.47902278131659], {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.15,
+          radius: 2800
+        }).addTo(map);
+
+        function onMapClick(e) {
+          L.popup().setLatLng(e.latlng).setContent('Koordinat disini' + e.latlng.toString()).openOn(map);
+        }
+        map.on('click', onMapClick);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.620156137341405, 111.47620035269416], {
+          icon: marker1
+        }).bindPopup('<b>SMP Negeri 1 Jiwan</b><br>9FHG+WF9, Jl. Raya Solo Jl. Jiwan - Bar., Pare, Kincang Wetan, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.619510424740718, 111.47415366606279], {
+          icon: marker1
+        }).bindPopup('<b>SD Negeri 1 Kincang Wetan</b><br>Jl. Raya Solo No.222, Pare, Kincang Wetan, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.625300053429311, 111.48248910623509], {
+          icon: marker1
+        }).bindPopup('<b>SD Negeri 1 Sukolilo</b><br> Jl. Muris, Dusun I, Sukolilo, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.620174191316316, 111.48094882268241], {
+          icon: marker1
+        }).bindPopup('<b>MA Darul Madinah Madiun</b><br>Jl. Sukasari 2, Dusun II, Kwangsen, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.615237848292983, 111.47756814851911], {
+          icon: marker1
+        }).bindPopup('<b>SD Negeri 2 Kwangsen</b><br>Jl. sukosari No.7 Rt. 17/06, Dusun II, Kwangsen, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.605770357030992, 111.47648026055913], {
+          icon: marker1
+        }).bindPopup('<b>SD Negeri Teguhan</b><br>Krajan, Teguhan, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.614233951677943, 111.47471675476238], {
+          icon: marker1
+        }).bindPopup('<b>MI Nurul Huda Kwangsen</b><br>Dusun I, Kwangsen, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.620994796896228, 111.47848452787697], {
+          icon: marker1
+        }).bindPopup('<b>SMK Negeri 2 Jiwan</b><br>Jl. Raya Solo, Dusun II, Kwangsen, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.627852173510926, 111.48165422132045], {
+          icon: marker1
+        }).bindPopup('<b>MI Miftahul Huda</b><br>JL. Sukolilo, No. 132, Jiwan, 63161, Dusun I, Sukolilo, Madiun, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.598448913791686, 111.47957634936827], {
+          icon: marker1
+        }).bindPopup('<b>MTS Negeri 6 Madiun</b><br>Jl. Dandang Gendis No.1, Teguhan, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.5968856207434845, 111.48065996175461], {
+          icon: marker1
+        }).bindPopup('<b>SMA 1 Jiwan</b><br> Jl. Dandang Gendis, Teguhan, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+        var marker1 = L.icon({
+          iconUrl: './icons/hat.png',
+          iconSize: [15, 25],
+        });
+        L.marker([-7.624498023956417, 111.49244246715728], {
+          icon: marker1
+        }).bindPopup('<b>SD Negeri Jiwan 1</b><brJL. Raya Solo. 107, Mangunharjo, Dusun I, Sukolilo, Kec. Jiwan, Kabupaten Madiun, Jawa Timur 63161').addTo(map);
+      </script>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container footer-bottom clearfix">
+      <div class="copyright"> © Copyright <strong><span>Muhammad Tegar Raung Ardi</span></strong>. All Rights Reserved </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
